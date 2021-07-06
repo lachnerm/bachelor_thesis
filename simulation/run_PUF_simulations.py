@@ -257,7 +257,7 @@ def main():
     parser.add_argument('--p', type=int, default=1,
                         help="number of processes that will be run for the attacks.")
     parser.add_argument('--root', '--root_folder', required=True,
-                        help="root folder directory where datasets are to be stored.")
+                        help="folder directory where datasets are to be stored.")
     parser.add_argument('--multiply', type=int, default=1,
                         help="multiplier for the x and y dimensions of the PUF.")
     parser.add_argument('--max', type=int, default=0,
@@ -273,11 +273,11 @@ def main():
     processes = args.p
     with_even = args.with_even
 
-    container_size = 512 * multiplier * um
-    container_depth = 512 * um
-    measure_dist = 300 * um
-    x_y_resolution = 512 * multiplier
-    z_resolution = 512
+    container_size = 16 * multiplier * um
+    container_depth = 16 * um
+    measure_dist = 16 * um
+    x_y_resolution = 16 * multiplier
+    z_resolution = 16
     border_value = container_size / 2
     wavelength = 1
 
